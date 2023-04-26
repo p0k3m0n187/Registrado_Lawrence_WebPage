@@ -15,8 +15,8 @@ function CollapsibleExample() {
             <Nav.Link href="#market">Market</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#register">Register</Nav.Link>
-            <Nav.Link href="#login">Log In</Nav.Link>
+            <Nav.Link href="#register"><button type="button" class="btn btn-light">Register</button></Nav.Link>
+            <Nav.Link href="#login"><button type="button" class="btn btn-outline-dark">Log In</button></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
