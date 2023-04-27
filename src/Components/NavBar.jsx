@@ -7,16 +7,16 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="primary" variant="light">
       <Container>
-        <Navbar.Brand href="#home">Home Page</Navbar.Brand>
+        <Navbar.Brand href="/home">Home Page</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#market">Market</Nav.Link>
+            <Nav.Link href="/features">Features</Nav.Link>
+            <Nav.Link href="/market">Market</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#register"><button type="button" class="btn btn-light">Register</button></Nav.Link>
-            <Nav.Link href="#login"><button type="button" class="btn btn-outline-dark">Log In</button></Nav.Link>
+            <Nav.Link href="/registration"><button type="button" class="btn btn-light">Register</button></Nav.Link>
+            <Nav.Link href="/login"><button type="button" class="btn btn-outline-dark">Log In</button></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
