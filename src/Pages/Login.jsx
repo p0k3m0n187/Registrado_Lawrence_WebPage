@@ -1,38 +1,41 @@
-import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useState} from 'react';
+// import Form from '../Components/Form';
 
-const LoginPage = () => {
-    const [username, setUserName] = useState('');
+function LoginPage() {
+    
+    const [emailAddress, setEmailAddress] = useState('');
 
+    
+    const element = [
+        {label: 'Email Address', type:'email'},
+        {label: 'First Name', type:'text'},
+        {label: 'Password', type:'password'},
+    ];
     return (
-    <div style={{ width:600, margin: 'auto', marginTop: 40 }}>
-        <h3>Log In</h3>
+        <>
         
         <Form>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Control type="email" placeholder="Enter Email" 
-        onChange={(e) => setUserName(e.target.value)}/>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassowrd">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Enter Password" />
-        </Form.Group>   
-
-        <Form.Group className="mb-3" controlId="formBasicCheckBox">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="checkbosx" placeholder="Check Me Out!" />
-        </Form.Group> 
-    
+        <div style={{ width:600, margin: 'auto', marginTop: 40 }}>
+        <h3>Log In</h3>
+        {element.map((elem) =>{
+            return (
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Label>{elem.label}</Form.Label>
+                    <Form.Control type={elem.type} placeholder=".........."
+                    onChange={(e) => setEmailAddress(e.target.value)}/>
+                </Form.Group>
+            );  
+        })}
         <Button variant="primary" type="submit">
-                Submit
-            </Button>
-        <h3>Hi! {username}</h3>
-        </Form>
+            Submit
+        </Button>
+        <h3>Hi! {emailAddress}</h3>
         </div>
-    )
-};
+        </Form>
+        </>
+    );
+}
 
 export default LoginPage;
