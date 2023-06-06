@@ -14,7 +14,7 @@ function Features () {
                backgroundSize: "contain",
                backgroundRepeat: "no-repeat",
             }} >
-            <center><h1><b>POKENG INA MO!</b></h1></center>
+            <center><h1><b>SPONGEBOB FEATURES!</b></h1></center>
             
         </div>
         
